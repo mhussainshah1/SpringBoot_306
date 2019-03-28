@@ -13,12 +13,16 @@ public class Director {
     private String genre;
 
     @OneToMany(mappedBy = "director",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER)
+            cascade = CascadeType.ALL)
 
     public Set<Movie> movies;
 
     public Director() {
+    }
+
+    public Director(String name, String genre) {
+        this.name = name;
+        this.genre = genre;
     }
 
     public long getId() {
