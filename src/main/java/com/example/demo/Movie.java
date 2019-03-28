@@ -14,19 +14,12 @@ public class Movie {
     private String description;
 
     //@NotNull
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "director_id")
     private Director director;
 
     public Movie() {
     }
-
-    public Movie(String title, long year, String description, Director director) {
-        this.title = title;
-        this.year = year;
-        this.description = description;
-        this.director = director;
-    }
-
 
     public long getId() {
         return id;
