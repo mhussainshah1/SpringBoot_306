@@ -40,6 +40,7 @@ public class HomeController {
         movie.setYear(2011);
         movie.setDescription("About Ewoks on the DeathStar...");
         movie.setDirector(director);
+
         movies.add(movie);
 
         director.setMovies(movies);
