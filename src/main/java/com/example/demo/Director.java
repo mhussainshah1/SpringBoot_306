@@ -15,8 +15,7 @@ public class Director {
     @OneToMany(mappedBy = "director",
             cascade = CascadeType.ALL,
             fetch = FetchType.EAGER)
-
-    public Set<Movie> movies;
+    private Set<Movie> movies;
 
     public Director() {
     }
