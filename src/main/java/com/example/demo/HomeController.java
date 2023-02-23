@@ -19,7 +19,7 @@ public class HomeController {
     MovieRepository movieRepository;
 
     @RequestMapping("/")
-    public String index(Model model){
+    public String index(Model model) {
 
         // we need to save director first because its id will go to child table
         Director director = new Director();
@@ -27,7 +27,8 @@ public class HomeController {
         director.setGenre("Sci Fi");
 
         Movie movie = new Movie();
-        movie.setTitle("Star Movie");;
+        movie.setTitle("Star Movie");
+
         movie.setYear(2017);
         movie.setDescription("About Stars...");
         movie.setDirector(director);
@@ -36,7 +37,8 @@ public class HomeController {
         movies.add(movie);
 
         movie = new Movie();
-        movie.setTitle("DeathStar Ewoks");;
+        movie.setTitle("DeathStar Ewoks");
+
         movie.setYear(2011);
         movie.setDescription("About Ewoks on the DeathStar...");
         movie.setDirector(director);
